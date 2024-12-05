@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة التقدم</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>أداة التقدم</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">التثقيف</a></li>
+                <li><a href="quiz.html">الاختبارات</a></li>
+                <li><a href="success-stories.html">قصص النجاح</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>تحقق من تقدمك</h2>
+            <p>هذه الأداة تساعدك على متابعة تقدمك في التوقف عن الشتائم.</p>
+            <button onclick="alert('تم تسجيل التقدم!')">تسجيل التقدم</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 موقع التواصل الإيجابي</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("تم تحميل أداة التقدم");
+        });
+    </script>
+</body>
+</html>

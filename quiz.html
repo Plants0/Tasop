@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبارات</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold}
+        main {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-container h2 {
+            text-align: center;
+        }
+        .quiz-container label {
+            display: block;
+            margin: 10px 0;
+        }
+        .quiz-container input[type="radio"] {
+            margin-right: 10px;
+        }
+        .quiz-container button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .quiz-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>الاختبارات</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">التثقيف</a></li>
+                <li><a href="tools.html">أداة التقدم</a></li>
+                <li><a href="success-stories.html">قصص النجاح</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="quiz-container">
+                <h2>اختبار التقدم في التواصل الإيجابي</h2>
+                <form id="quiz-form">
+                    <label>هل تشعر أنك تستخدم الشتائم بشكل أقل؟</label>
+                    <input type="radio" name="q1" value="yes"> نعم
+                    <input type="radio" name="q1" value="no"> لا
+
+                    <label>هل تحاول أن تكون أكثر وعيًا بكلماتك؟</label>
+                    <input type="radio" name="q2" value="yes"> نعم
+                    <input type="radio" name="q2" value="no"> لا
+
+                    <button type="button" onclick="submitQuiz()">تقديم الاختبار</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 موقع التواصل الإيجابي</p>
+    </footer>
+
+    <script>
+        function submitQuiz() {
+            const form = document.getElementById('quiz-form');
+            const formData = new FormData(form);
+            let score = 0;
+
+            formData.forEach((value, key) => {
+                if (value === "yes") {
+                    score++;
+                }
+            });
+
+            alert(`لقد حصلت على ${score} من 2 في الاختبار.`);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("تم تحميل صفحة الاختبارات");
+        });
+    </script>
+</body>
+</html>
